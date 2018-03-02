@@ -1,14 +1,23 @@
 {
-  "name": "electron-ts-base",
+  "name": "devdocs-desktop",
   "version": "1.0.0",
   "description": "A base config for Electron with TypeScript and React",
   "main": "dist/main.js",
   "author": "Marco Antônio",
   "license": "MIT",
   "scripts": {
-    "start": "tsc main.ts --outDir dist && electron ."
+    "start": "tsc main.ts --outDir dist && electron .",
+    "build": "electron-packager ./dist --out builds --overwrite --all",
+    "icon": "sips -z 128 128 -s format $f ./images/base.png --out ./images/icon.$f",
+    "icon:win": "f=ico yarn icon",
+    "icon:mac": "f=icns yarn icon",
+    "icon:linux": "f=png yarn icon",
+    "generate:icons": "yarn icon:mac; yarn icon:win; yarn icon:linux"
   },
   "dependencies": {
     "electron": "^1.8.2"
+  },
+  "devDependencies": {
+    "electron-packager": "^11.0.1"
   }
 }
