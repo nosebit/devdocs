@@ -9,7 +9,8 @@ const config = {
   asar: false,
   icon: path.resolve(__dirname, 'images/icon'),
   name: 'DevDocs',
-  overwrite: true
+  overwrite: true,
+  ignore: ['node_modules']
 }
 
 packager(config, (err) => !err && console.log("\n\nGreat, we just build everything, let's have a party now 🤩 🎉  \n"))
