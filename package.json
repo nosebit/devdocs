@@ -1,10 +1,15 @@
 {
   "name": "devdocs-desktop",
   "version": "1.0.0",
-  "description": "A base config for Electron with TypeScript and React",
+  "description": "DevDocs Desktop",
   "main": "./main.js",
   "author": "Marco Antônio",
   "license": "MIT",
+  "homepage": "https://github.com/nosebit/devdocs.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nosebit/devdocs.git"
+  },
   "scripts": {
     "compile": "tsc main.ts --outDir .",
     "start": "yarn compile && electron .",
